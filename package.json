@@ -4,15 +4,13 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
-   
-   "build": "npx strapi build",
+   "develop": "npx strapi develop",
+  "build": "npx strapi build",
   "start": "npx strapi start",
     "strapi": "strapi",
     "deploy": "strapi deploy"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "^5.16.1",
     "@strapi/plugin-i18n": "^4.15.0",
     "@strapi/plugin-users-permissions": "^5.16.1",
     "@strapi/strapi": "^5.16.1",
