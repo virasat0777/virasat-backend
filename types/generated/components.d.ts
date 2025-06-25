@@ -432,32 +432,6 @@ export interface ContactGetInTouch extends Schema.Component {
   };
 }
 
-export interface CareerListingSection extends Schema.Component {
-  collectionName: 'components_career_listing_sections';
-  info: {
-    displayName: 'listingSection';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.Text;
-    available_jobs: Attribute.Relation<
-      'career.listing-section',
-      'oneToMany',
-      'api::job.job'
-    >;
-  };
-}
-
-export interface CareerBadges extends Schema.Component {
-  collectionName: 'components_career_badges';
-  info: {
-    displayName: 'badges';
-  };
-  attributes: {
-    badge: Attribute.String;
-  };
-}
-
 export interface AboutVisionMission extends Schema.Component {
   collectionName: 'components_about_vision_missions';
   info: {
@@ -538,6 +512,32 @@ export interface AboutBankCollabs extends Schema.Component {
   };
 }
 
+export interface CareerListingSection extends Schema.Component {
+  collectionName: 'components_career_listing_sections';
+  info: {
+    displayName: 'listingSection';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.Text;
+    available_jobs: Attribute.Relation<
+      'career.listing-section',
+      'oneToMany',
+      'api::job.job'
+    >;
+  };
+}
+
+export interface CareerBadges extends Schema.Component {
+  collectionName: 'components_career_badges';
+  info: {
+    displayName: 'badges';
+  };
+  attributes: {
+    badge: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -574,14 +574,14 @@ declare module '@strapi/types' {
       'contact.office-location': ContactOfficeLocation;
       'contact.location-items': ContactLocationItems;
       'contact.get-in-touch': ContactGetInTouch;
-      'career.listing-section': CareerListingSection;
-      'career.badges': CareerBadges;
       'about.vision-mission': AboutVisionMission;
       'about.partners': AboutPartners;
       'about.overview': AboutOverview;
       'about.management': AboutManagement;
       'about.loan-partners': AboutLoanPartners;
       'about.bank-collabs': AboutBankCollabs;
+      'career.listing-section': CareerListingSection;
+      'career.badges': CareerBadges;
     }
   }
 }
